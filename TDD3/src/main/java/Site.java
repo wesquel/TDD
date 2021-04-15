@@ -7,7 +7,7 @@ public class Site {
 
     public void adicionarUsuario(String nome, String data, boolean prioritario, String cpf, int senha, String profissao){
         Usuario user = new Usuario(nome,data,prioritario,cpf,senha,profissao);
-        if (user.getNome() != null && user.getDataNascimento() != null && user.getCpf() != 0 && senha != 0 && profissao != null){
+        if (user.getNome() != null && user.getDataNascimento() != null && user.getCpf() != 0 && senha != 0 && profissao != null && getUsuarioSite(cpf) == null){
             cadastrosDeUsuarios.add(user);
         }
     }
